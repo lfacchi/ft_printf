@@ -1,1 +1,1 @@
-# The object of this project id recreate de function printf using c
+# The object of this project is recreate de function printf using c
