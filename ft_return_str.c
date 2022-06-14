@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_return_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucdos-s < lucdos-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 10:39:34 by lucdos-s          #+#    #+#             */
-/*   Updated: 2022/06/14 15:54:29 by lucdos-s         ###   ########.fr       */
+/*   Created: 2022/06/10 10:19:42 by lucdos-s          #+#    #+#             */
+/*   Updated: 2022/06/14 14:43:03 by lucdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
+#include "ft_printf.h"
 
-# define FT_PRINTF_H
+int	ft_print_char(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdio.h>
+int	ft_print_str(char *s)
+{
+	int	i;
 
-int	ft_print_char(char c);
-int	ft_print_nbr(int n);
-int	ft_print_unbr(unsigned int n);
-int	ft_print_str(char *s);
-int ft_printf(const char *input, ...);
-
-#endif
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
+}
