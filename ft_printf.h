@@ -6,7 +6,7 @@
 /*   By: lucdos-s < lucdos-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:39:34 by lucdos-s          #+#    #+#             */
-/*   Updated: 2022/06/14 23:44:54 by lucdos-s         ###   ########.fr       */
+/*   Updated: 2022/06/15 19:53:47 by lucdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <unistd.h>
 # include <stdio.h>
 
-#define HEXBASE "0123456789abcdef"
-#define HEXBASEUP "0123456789ABCDEF"
+# define HEXBASE "0123456789abcdef"
+# define HEXBASEUP "0123456789ABCDEF"
 
 int	ft_print_char(char c);
 int	ft_print_nbr(int n);
