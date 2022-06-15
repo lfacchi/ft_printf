@@ -6,7 +6,7 @@
 /*   By: lucdos-s < lucdos-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 20:04:22 by lucdos-s          #+#    #+#             */
-/*   Updated: 2022/06/14 16:57:47 by lucdos-s         ###   ########.fr       */
+/*   Updated: 2022/06/14 22:47:51 by lucdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,4 @@ int	ft_print_unbr(unsigned int n)
 	
 	return (n_printed);
 }
+

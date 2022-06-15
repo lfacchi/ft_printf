@@ -6,7 +6,7 @@
 /*   By: lucdos-s < lucdos-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:27:37 by lucdos-s          #+#    #+#             */
-/*   Updated: 2022/06/14 16:39:08 by lucdos-s         ###   ########.fr       */
+/*   Updated: 2022/06/15 00:19:18 by lucdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,37 +25,42 @@ int ft_printf(const char *input, ...)
 	{
 		if (input[i] == '%')
 		{
-		//c Prints a single character.
 			if (input[i + 1] == 'c')
 			{
 				bytes += ft_print_char(va_arg(list, int));
 				i++;
 			}
-		// //s Prints a string (as defined by the common C convention).
 			if (input[i + 1] == 's')
 			{
 				bytes += ft_print_str(va_arg(list, char *));
 				i++;
 			}
-		// //p The void * pointer argument has to be printed in hexadecimal format.
-		// 	if (input[i + 1] == 'p')
-		// //d Prints a decimal (base 10) number.
-			if (input[i + 1] == 'd' || 'i')
+			if (input[i + 1] == 'p')
+			{
+				bytes += write(1, "0x", 2);
+				bytes += ft_print_pointer(va_arg(list, unsigned long));
+				i++;
+			}
+			if (input[i + 1] == 'd' || input[i + 1] == 'i')
 			{
 				bytes += ft_print_nbr(va_arg(list, int));
 				i++;
 			}
-		// //u Prints an unsigned decimal (base 10) number.
 			if (input[i + 1] == 'u')
 			{
-				bytes += ft_print_unbr(va_arg(list, unsigned long int));
+				bytes += ft_print_unbr(va_arg(list, unsigned int));
 				i++;
 			}
-		// //x Prints a number in hexadecimal (base 16) lowercase format.
-		// 	if (input[i + 1] == 'x')
-		// //X Prints a number in hexadecimal (base 16) uppercase format.
-		// 	if (input[i + 1] == 'X')
-		// //% Prints a percent sign.
+			if (input[i + 1] == 'x')
+			{
+				bytes = ft_print_hex_low(va_arg(list, unsigned long));
+				i++;
+			}
+			if (input[i + 1] == 'X')
+			{
+				bytes = ft_print_hex_up(va_arg(list, unsigned long));
+				i++;
+			}
 			if (input[i + 1] == '%')
 			{
 				bytes += ft_print_char('%');
@@ -70,10 +75,5 @@ int ft_printf(const char *input, ...)
 		i++;
 	}
 	return (bytes);
-	
 }
 
-// int ft_in_list(char *text_list, char c)
-// {
-
-// }
