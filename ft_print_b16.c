@@ -6,7 +6,7 @@
 /*   By: lucdos-s < lucdos-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 10:19:49 by lucdos-s          #+#    #+#             */
-/*   Updated: 2022/06/15 00:10:27 by lucdos-s         ###   ########.fr       */
+/*   Updated: 2022/06/15 20:22:51 by lucdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int ft_print_pointer(unsigned long p)
 		}
 		n_printed += ft_print_char(HEXBASE[p % 16]);
 		
-		return (n_printed);
 	}
+	return (n_printed);
 }
 

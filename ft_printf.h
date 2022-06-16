@@ -6,7 +6,7 @@
 /*   By: lucdos-s < lucdos-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:39:34 by lucdos-s          #+#    #+#             */
-/*   Updated: 2022/06/15 19:53:47 by lucdos-s         ###   ########.fr       */
+/*   Updated: 2022/06/15 20:16:53 by lucdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int ft_printf(const char *input, ...);
 int ft_print_pointer(unsigned long p);
 int ft_print_hex_low(unsigned long num);
 int ft_print_hex_up(unsigned long num);
+int ft_set_print(va_list arg, char c);
 
 #endif

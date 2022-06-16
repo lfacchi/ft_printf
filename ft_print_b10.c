@@ -6,7 +6,7 @@
 /*   By: lucdos-s < lucdos-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 20:04:22 by lucdos-s          #+#    #+#             */
-/*   Updated: 2022/06/14 22:47:51 by lucdos-s         ###   ########.fr       */
+/*   Updated: 2022/06/15 20:23:39 by lucdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	ft_print_nbr(int n)
 		n_printed += ft_print_nbr(number / 10);
 	}
 	n_printed += ft_print_char((number % 10) + '0');
-	
 	return (n_printed);
 }
 
